@@ -3,3 +3,15 @@ Title: Analysis Project for AdvancedR3
 Type: Project
 Version: 0.0.1
 Encoding: UTF-8
+Imports: 
+    curl,
+    dplyr,
+    fs,
+    here,
+    readr,
+    readxl,
+    snakecase,
+    stringr,
+    tidyr,
+Suggests: 
+    usethis
