@@ -14,5 +14,8 @@ Imports:
     stringr,
     tidyr,
 Suggests: 
+    gitcreds,
     styler,
     usethis
+URL: https://github.com/lko1802/AdvancedR3
+BugReports: https://github.com/lko1802/AdvancedR3/issues
