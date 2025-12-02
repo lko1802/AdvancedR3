@@ -4,7 +4,7 @@ TODO: Add more to the title of your project here
 
 TODO: Give a brief description of what your project is about
 
-This project...
+This project is a learning project for the advanced r course.
 
 # Brief description of folder and file contents
 
@@ -13,16 +13,17 @@ data, docs and R folders.
 
 The following folders contain:
 
--   `data/`:
--   `docs/`:
--   `R/`:
+-   `data/`: Contains the cleaned lipidomics data
+-   `docs/`: Contains the quarto script for learning during the course
+-   `R/`: Contains the functions document, were all finished functions
+    will be pasted and sourced from.
 
 # Installing project R package dependencies
 
 If dependencies have been managed by using
 `usethis::use_package("packagename")` through the `DESCRIPTION` file,
-installing dependencies is as easy as opening the
-`AdvancedR3.Rproj` file and running this command in the console:
+installing dependencies is as easy as opening the `AdvancedR3.Rproj`
+file and running this command in the console:
 
 ```         
 # install.packages("pak")
