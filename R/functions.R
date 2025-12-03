@@ -52,10 +52,36 @@ clean <- function(data) {
 #'
 #' @returns A.data.frame
 #
-preprocess <- function(data){
+preprocess <- function(data) {
   data |>
     dplyr::mutate(
       class = as.factor(class),
       value = scale(value)
+    )
+}
+
+
+#' Function to fit model
+#'
+#' @param data the just_cholesterol data
+#' @param model the model we want to fit
+#'
+#' @returns Model specificatoins
+#'
+fit_model <- function(data, model) {
+  data <- lipidomics |>
+    dplyr::filter(metabolite == "Cholesterol") |>
+    preprocess()
+
+  stats::glm(
+    formula = model,
+    data = data,
+    family = binomial
+  ) |>
+    broom::tidy(exponentiate = TRUE) |>
+    dplyr::mutate(
+      metabolite = unique(data$metabolite),
+      model = format(model),
+      .before = everything()
     )
 }
