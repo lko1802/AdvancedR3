@@ -42,3 +42,20 @@ clean <- function(data) {
     dplyr::summarise(value = mean(value), .groups = "keep") |>
     dplyr::ungroup()
 }
+
+
+
+
+#' Preprocessing the data
+#'
+#' @param data  The lipidomics data
+#'
+#' @returns A.data.frame
+#
+preprocess <- function(data){
+  data |>
+    dplyr::mutate(
+      class = as.factor(class),
+      value = scale(value)
+    )
+}

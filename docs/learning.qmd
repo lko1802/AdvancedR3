@@ -43,3 +43,7 @@ lipidomics |>
   summarise(value = mean(value), .groups = "keep") |>
   ungroup()
 ```
+
+```{r}
+
+```
