@@ -24,3 +24,7 @@ lipidomics |>
   mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) |>
   select(Metabolite = metabolite, "Mean SD" = MeanSD)
 ```
+
+```{r}
+
+```
