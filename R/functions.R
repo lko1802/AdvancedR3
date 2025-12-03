@@ -69,10 +69,6 @@ preprocess <- function(data) {
 #' @returns Model specificatoins
 #'
 fit_model <- function(data, model) {
-  data <- lipidomics |>
-    dplyr::filter(metabolite == "Cholesterol") |>
-    preprocess()
-
   stats::glm(
     formula = model,
     data = data,
