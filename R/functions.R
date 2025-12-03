@@ -14,3 +14,21 @@ create_table_descriptive_stats <- function(data) {
     dplyr::select(Metabolite = metabolite, "Mean SD" = MeanSD)
 }
 
+
+
+
+
+#' Function for plotting distributions of the lipidomics data
+#'
+#' @param data The lipidomics data to be plotted
+#'
+#' @returns A plot object
+#'
+create_plot_distributions <- function(data) {
+  data |> ggplot2::ggplot(
+    ggplot2::aes(x = value)
+  ) +
+    ggplot2::geom_histogram() +
+    ggplot2::facet_wrap(vars(metabolite), scales = "free") +
+    ggplot2::theme_minimal()
+}
