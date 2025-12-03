@@ -7,6 +7,7 @@ Imports:
     curl,
     dplyr,
     fs,
+    glue,
     here,
     quarto,
     readr,
@@ -22,3 +23,5 @@ Suggests:
     usethis
 URL: https://github.com/lko1802/AdvancedR3
 BugReports: https://github.com/lko1802/AdvancedR3/issues
+Depends: 
+    tidyverse
