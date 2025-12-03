@@ -1,4 +1,6 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
 file|stem|c44b806f3841f535|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20413.2920788523s|s24277b|24277|file|local|vector|||0||
 lipidomics|stem|7ef705c1aec330d3|0adf46d83f39a429|e88672c19d0c6d6c|-1498393010||t20424.5852197499s|s4882b|4882|rds|local|vector|||0.73||
-quarto_doc|stem|b1c2c958796908b0|7d7691b957727962|de86a06fd544e03a|1582462002|docs/learning.html*docs/learning.qmd|t20425.3582669661s|s24348b|24348|file|local|vector|||10.75||
+table_descriptive_stats|stem|c492b3c7c9b8f282|34e33bc9eaef7fce|fad6b5ca176f7cef|1291134815||t20425.3948182283s|s418b|418|rds|local|vector|||0.03||
+create_table_descriptive_stats|function|0a4673ffa3291ef5
+quarto_doc|stem|682ce024c67b8196|946569ef20e4a1f9|faa2127cb7db1aa0|1582462002|docs/learning.html*docs/learning.qmd|t20425.4105653454s|s26456b|26456|file|local|vector|||12.84||

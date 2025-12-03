@@ -9,7 +9,7 @@ library(tarchetypes) # Load other packages as needed.
 
 # Set target options:
 tar_option_set(
-  #packages = c("tibble") # Packages that your targets need for their tasks.
+  # packages = c("tibble") # Packages that your targets need for their tasks.
   # format = "qs", # Optionally set the default storage format. qs is fast.
   #
   # Pipelines that take a long time to run may benefit from
@@ -58,10 +58,15 @@ list(
   tar_target(
     name = lipidomics,
     command = readr::read_csv(file,
-                              show_col_types = FALSE)
+      show_col_types = FALSE
+    )
   ),
   tar_quarto(
     name = quarto_doc,
     path = "docs/learning.qmd"
+  ),
+  tar_target(
+    name = table_descriptive_stats,
+    command = create_table_descriptive_stats(lipidomics)
   )
 )
