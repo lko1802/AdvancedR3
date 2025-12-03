@@ -1,4 +1,3 @@
-
 #' Function to create table with descriptive statistics
 #'
 #' @param data The dataset to create descriptive stastictics on
@@ -15,9 +14,6 @@ create_table_descriptive_stats <- function(data) {
 }
 
 
-
-
-
 #' Function for plotting distributions of the lipidomics data
 #'
 #' @param data The lipidomics data to be plotted
@@ -31,4 +27,18 @@ create_plot_distributions <- function(data) {
     ggplot2::geom_histogram() +
     ggplot2::facet_wrap(ggplot2::vars(metabolite), scales = "free") +
     ggplot2::theme_minimal()
+}
+
+
+#' Function to do some cleaning of lipidomics data
+#'
+#' @param data The lipidomics data
+#'
+#' @returns a data.frame
+
+clean <- function(data) {
+  data |>
+    dplyr::group_by(dplyr::pick(-value)) |>
+    dplyr::summarise(value = mean(value), .groups = "keep") |>
+    dplyr::ungroup()
 }
