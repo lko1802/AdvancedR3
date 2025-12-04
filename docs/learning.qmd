@@ -45,22 +45,21 @@ lipidomics |>
 ```
 
 ```{r}
+```
+
+## Running multiple models
+
+```{r}
+
 just_cholesterol <- lipidomics |>
   filter(metabolite == "Cholesterol") |>
   preprocess()
 
-glm(
-  formula = class ~ value,
-  data = just_cholesterol,
-  family = binomial
+list(
+  class ~ value,
+  class ~ value + gender + age
 ) |>
-  broom::tidy(exponentiate = TRUE) |>
-  mutate(
-    metabolite = unique(just_cholesterol$metabolite),
-    model = format(class ~ value),
-    .before = everything()
-  )
-```
+  map(\(model) fit_model(just_cholesterol, model = model)) |>
+  list_rbind()
 
-```{r}
 ```
