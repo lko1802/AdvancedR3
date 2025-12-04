@@ -96,3 +96,20 @@ create_model_results <- function(data) {
     preprocess() |>
     fit_model(class ~ value)
 }
+
+
+
+#' Function to fit all models to a given data frame
+#'
+#' @param data The data frame to fit all models to
+#'
+#' @returns A dataframe with results from all models
+#'
+fit_all_models <- function(data) {
+  list(
+    class ~ value,
+    class ~ value + gender + age
+  ) |>
+    purrr::map(\(model) fit_model(data, model = model)) |>
+    purrr::list_rbind()
+}
