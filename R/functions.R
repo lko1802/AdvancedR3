@@ -83,20 +83,19 @@ fit_model <- function(data, model) {
 }
 
 
-
-#' Model to create results
+#' Model to create results for all metabolites
 #'
 #' @param data The lipidomics dataset
 #'
-#' @returns a model fitted on the preprocessed datacr
+#' @returns Models for all metabolites
 #'
 create_model_results <- function(data) {
   data |>
-    dplyr::filter(metabolite == "Cholesterol") |>
-    preprocess() |>
-    fit_model(class ~ value)
+    dplyr::group_split(metabolite) |>
+    purrr::map(preprocess) |>
+    purrr::map(fit_all_models) |>
+    purrr::list_rbind()
 }
-
 
 
 #' Function to fit all models to a given data frame
