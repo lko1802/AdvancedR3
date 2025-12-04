@@ -4,11 +4,13 @@ lipidomics|stem|6d85720faf446486|e7a0b51b4c5fd316|8766f2d0e3176a68|-1498393010||
 plot_distributions|stem|a1c490451e909b65|01ce942be37808d6|9e006b6ad2c0b24f|222080706||t20425.5817594506s|s270492b|270492|rds|local|vector|||0.96||
 table_descriptive_stats|stem|ef6095340ac76f94|34e33bc9eaef7fce|9ec9027b52b757fd|1291134815||t20425.5817611976s|s416b|416|rds|local|vector|||0.03||
 model_results|stem|3f4c19cf52422594|8dc321a94f7f9089|3e89c75cdb5f17a5|-1523611067||t20426.4214894252s|s2770b|2770|rds|local|vector|||0.81|glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred|
-quarto_doc|stem|d673e56583868b18|17ff11b3307356f6|80e68723c2703b32|1582462002|docs/learning.html*docs/learning.qmd|t20426.42166916s|s34448b|34448|file|local|vector|||14.92||
 fit_model|function|e0fcf73f9c0eeb40
 preprocess|function|27efdd529f320467
 clean|function|ce06151f5b2133d2
+create_plot_model_results|function|bb745183d78c763f
 create_table_descriptive_stats|function|0a4673ffa3291ef5
 create_plot_distributions|function|b411ca55e4bdd968
 fit_all_models|function|42aa88d9ba87a1b6
 create_model_results|function|1817c251b92e1ee9
+plot_model_results|stem|0cc4d5bae520167e|96cd43e688d135de|8c6dec2f63a28279|384392714||t20426.4571326186s|s133240b|133240|rds|local|vector|||0.81||
+quarto_doc|stem|caf1b89af7a91c50|85e3021bfda29f22|cd2f6d1b722ab851|1582462002|docs/learning.html*docs/learning.qmd|t20426.4573068111s|s68012b|68012|file|local|vector|||15.18||

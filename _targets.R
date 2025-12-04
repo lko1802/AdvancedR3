@@ -77,5 +77,9 @@ list(
   tar_target(
     name = model_results,
     command = create_model_results(lipidomics)
+  ),
+  tar_target(
+    name = plot_model_results,
+    command = create_plot_model_results(model_results)
   )
 )
